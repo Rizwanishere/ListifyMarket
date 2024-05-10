@@ -1,8 +1,22 @@
-# React + Vite
+# React 
+- React is a JavaScript library for building user interfaces based on components.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# React Setup
+- ```npm create vite@latest```
+- Enter project-name
+- React 
+- JavaScript
+- ```cd project-name ```
+- ```npm install```
+- ```npm run dev```
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Tailwind Integration
+1. ```npm install -D tailwindcss postcss autoprefixer```
+2. ```npx tailwindcss init -p```
+3. Add in tailwind.config.cjs file's content section
+- ```"./index.html","./src/**/*.{js,ts,jsx,tsx}"```
+4. Add the statements below to your ./src/index.css file:
+- @tailwind base;
+- @tailwind components;
+- @tailwind utilities;
+5. import './index.css'; in main.jsx
