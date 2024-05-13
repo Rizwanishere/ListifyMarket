@@ -11,6 +11,7 @@ import NewProduct from "./Product/NewProduct";
 import TodoList from "./todo/TodoList";
 import TodoDetail from "./todo/TodoDetail";
 import NewTodo from "./todo/NewTodo";
+import UpdateTodo from "./todo/UpdateTodo";
 
 function MainApp() {
   return (
@@ -25,6 +26,7 @@ function MainApp() {
         <Route path="/todo" element={<TodoList />} />
         <Route path="/todo/:id" element={<TodoDetail />} />
         <Route path="/todo/new" element={<NewTodo />} />
+        <Route path="/todo/update/:id" element={<UpdateTodo />} />
         <Route path="/users" element={<UserList />} />
 
         <Route path="*" element={<NotFound />} />

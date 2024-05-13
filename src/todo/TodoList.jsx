@@ -69,7 +69,7 @@ function TodoList() {
 
         <button
           onClick={onPrev}
-          className="border border-black mt-7 mb-10 mr-2 text-black p-1.5 rounded"
+          className="border border-black hover:bg-gray-100 mt-7 mb-10 mr-2 text-black p-1.5 rounded"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +91,7 @@ function TodoList() {
         </h1>
         <button
           onClick={onNext}
-          className="border border-black mt-7 mb-10 ml-2 text-black p-1.5 rounded"
+          className="border border-black hover:bg-gray-100 mt-7 mb-10 ml-2 text-black p-1.5 rounded"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -168,9 +168,9 @@ function TodoList() {
         <div>
           <Link
             to="/todo/new"
-            className="flex border border-black p-1 mt-7 ml-5 font-serif hover:bg-gray-100 rounded text-black"
+            className="flex border border-black p-1 pl-2 pr-2 mt-7 ml-5 font-serif hover:bg-gray-100 rounded text-black"
           >
-            Add Product
+            Add
           </Link>
         </div>
       </div>

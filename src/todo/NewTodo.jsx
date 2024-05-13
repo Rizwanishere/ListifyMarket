@@ -2,6 +2,8 @@ import axios from "axios";
 import { useState } from "react";
 import Error from "../util/Error";
 import ShouldRender from "../util/ShouldRender";
+import { useNavigate } from "react-router-dom";
+
 
 function NewProduct() {
   const [todo, setTodo] = useState({
@@ -17,6 +19,9 @@ function NewProduct() {
     setTodo(newState);
   };
 
+  const navigate = useNavigate();
+
+
   const onSaveBtn = async () => {
     try {
       const url = "http://localhost:3000/todo";
@@ -27,6 +32,9 @@ function NewProduct() {
         description: "",
         status: "",
       });
+      setTimeout(() => {
+        navigate("/todo")
+      }, 2000)
     } catch {
       setError(true);
     }
@@ -44,7 +52,7 @@ function NewProduct() {
         <Error msg="Failed to add todo, Please try again" />
       </ShouldRender>
 
-      <h1 className="text-xl mb-6 font-semibold">New Todo</h1>
+      <h1 className="text-xl mb-6 font-semibold">New Task</h1>
 
       <div className="mb-4">
         <label className="block py-1">Title</label>
