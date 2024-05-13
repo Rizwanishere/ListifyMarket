@@ -1,7 +1,12 @@
-# Ecommerce website
-- Website with 3 api's
-- Fakestoreapi, github users api & a todo list api
+# CGC Project - MERN Website
+### Exploring APIs: Products, GitHub Users, and Todo Lists
+
 ![Website](https://raw.githubusercontent.com/Rizwanishere/CGC-CodeCrafters/main/assets/EcomWebSS.png)
+
+### A Website with 3 api's
+1. Fakestoreapi (https://fakestoreapi.com/products)
+2. Github users api (https://api.github.com/users)
+3. My todo list api (https://github.com/Rizwanishere/cgc-todo-list) 
 # React 
 - React is a JavaScript library for building user interfaces based on components.
 
