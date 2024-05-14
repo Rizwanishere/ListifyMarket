@@ -33,14 +33,14 @@ function TodoItem({ todo, onDelete }) {
 
      <div className="px-5 pb-5">
       <Link to={{ pathname: `/todo/update/${todo._id}`, state: { todoData: todo } }}>
-        <button className="mt-2 border border-black font-serif rounded p-1 hover:bg-gray-100 w-full">Update</button>
+        <button className="mt-2 border border-gray-200 shadow font-serif rounded p-1 hover:bg-gray-100 w-full">Update</button>
       </Link>
      </div>
 
       <form>
         <div className="px-5 pb-5">
           <button onClick={onDeleteButton}
-          className="border border-black font-serif rounded p-1 hover:bg-gray-100 w-full"
+          className="border border-gray-200 shadow font-serif rounded p-1 hover:bg-gray-100 w-full"
           >Delete</button>
         </div>
       </form>
