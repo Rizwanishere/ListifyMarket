@@ -20,7 +20,7 @@ function UpdateTodo() {
   useEffect(() => {
     const fetchTodo = async () => {
       try {
-        const url = `http://localhost:3000/todo/${id}`;
+        const url = `https://cgc-todo-list.onrender.com/todo/${id}`;
         const response = await axios.get(url);
         const todoData = response.data;
         setTodo({
@@ -44,7 +44,7 @@ function UpdateTodo() {
   const onSubmitBtn = async (evt) => {
     evt.preventDefault();
     try {
-      const url = `http://localhost:3000/todo/${id}`;
+      const url = `https://cgc-todo-list.onrender.com/todo/${id}`;
       await axios.patch(url, todo);
       setSuccess(true);
       setTimeout(() => {

@@ -3,10 +3,9 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 function TodoItem({ todo, onDelete }) {
-
-  const onDeleteButton = async (evt) => {
+  const onDeleteButton = async () => {
     try {
-      await axios.delete(`http://localhost:3000/todo/${todo._id}`);
+      await axios.delete(`https://cgc-todo-list.onrender.com/todo/${todo._id}`);
       onDelete(todo._id);
     } catch(err) {
       console.log(err);
@@ -37,13 +36,11 @@ function TodoItem({ todo, onDelete }) {
       </Link>
      </div>
 
-      <form>
-        <div className="px-5 pb-5">
-          <button onClick={onDeleteButton}
-          className="border border-gray-200 shadow font-serif rounded p-1 hover:bg-gray-100 w-full"
-          >Delete</button>
-        </div>
-      </form>
+     <div className="px-5 pb-5">
+        <button onClick={onDeleteButton}
+        className="border border-gray-200 shadow font-serif rounded p-1 hover:bg-gray-100 w-full"
+        >Delete</button>
+     </div>      
 
     </div>
   );

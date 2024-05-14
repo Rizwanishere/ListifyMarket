@@ -24,7 +24,7 @@ function TodoList() {
   };
 
   const fetchData = async () => {
-    const url = `http://localhost:3000/todo/page/${page}/size/6?search=${search}&sort=${sort}&direction=${direction}`;
+    const url = `https://cgc-todo-list.onrender.com/todo/page/${page}/size/6?search=${search}&sort=${sort}&direction=${direction}`;
     try {
       const res = await axios.get(url);
       setTodo(res.data.data);

@@ -14,7 +14,7 @@ function TodoDetail() {
 
   useEffect(() => {
     const id = params.id;
-    const url = `http://localhost:3000/todo/${id}`;
+    const url = `https://cgc-todo-list.onrender.com/todo/${id}`;
     axios
       .get(url)
       .then((res) => setTodo(res.data), setLoading(false))
