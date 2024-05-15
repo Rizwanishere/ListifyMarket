@@ -34,7 +34,7 @@ function NewProduct() {
       });
       setTimeout(() => {
         navigate("/todo")
-      }, 2000)
+      }, 1000)
     } catch {
       setError(true);
     }

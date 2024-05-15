@@ -34,7 +34,9 @@ function NewProduct() {
         description: "",
         inStock: false,
       });
-      //   navigate("/products"); // Redirects to products page
+      setTimeout(() => {
+        navigate("/todo")
+      }, 1000)
     } catch {
       setError(true);
     }
