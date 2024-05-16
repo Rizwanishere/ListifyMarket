@@ -2,11 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-function TodoItem({ todo, onDelete }) {
+function TodoItem({ todo }) {
   const onDeleteButton = async () => {
     try {
       await axios.delete(`https://cgc-todo-list.onrender.com/todo/${todo._id}`);
-      onDelete(todo._id);
     } catch(err) {
       console.log(err);
     }

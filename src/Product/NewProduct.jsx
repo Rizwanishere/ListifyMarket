@@ -35,7 +35,7 @@ function NewProduct() {
         inStock: false,
       });
       setTimeout(() => {
-        navigate("/todo")
+        navigate("/products")
       }, 1000)
     } catch {
       setError(true);
