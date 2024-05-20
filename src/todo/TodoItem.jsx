@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
 import axios from "axios";
 
@@ -12,7 +14,7 @@ function TodoItem({ todo }) {
   }
 
   return (
-    <div className="m-2 ml-8 max-w-sm bg-white border border-gray-200 rounded-lg shadow">
+    <div className="flex max-w p-5 border shadow rounded-lg mb-3 items-center justify-between space-x-24">
       <Link to={"/todo/" + todo._id}>
         
         <div className="px-5 pb-5">
@@ -24,22 +26,20 @@ function TodoItem({ todo }) {
           </div>
 
           <div className="text-md mt-4 font-bold tracking-tight text-gray-900">
-            Status: <span className="font-semibold text-gray-600">{todo.status}</span>
+            Status:{' '}
+            <span className={`${todo.status === 'completed' ? 'text-green-500' : todo.status === 'in-progress' ? 'text-yellow-500' : 'text-red-500'}`}>{todo.status}</span>
           </div>
         </div>
       </Link>    
 
-     <div className="px-5 pb-5">
+     <div className="flex mt-4 justify-end">
       <Link to={{ pathname: `/todo/update/${todo._id}`, state: { todoData: todo } }}>
-        <button className="mt-2 border border-gray-200 shadow font-serif rounded p-1 hover:bg-gray-100 w-full">Update</button>
+        <button className="border border-gray-200 shadow rounded p-2 hover:bg-gray-100"><FontAwesomeIcon icon={faEdit} /></button>
       </Link>
+      <button onClick={onDeleteButton}
+        className=" ml-2 border border-gray-200 shadow rounded p-2 mb-3 hover:bg-gray-100"
+        ><FontAwesomeIcon icon={faTrash} /></button>
      </div>
-
-     <div className="px-5 pb-5">
-        <button onClick={onDeleteButton}
-        className="border border-gray-200 shadow font-serif rounded p-1 hover:bg-gray-100 w-full"
-        >Delete</button>
-     </div>      
 
     </div>
   );
