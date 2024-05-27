@@ -2,8 +2,24 @@
 export default {
   content: ["./index.html","./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'primary' : '#0e7490',
+      }
+    },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '::selection': {
+          backgroundColor: '#0e7490',
+          color: '#ffffff',
+        },
+        '::-moz-selection': {
+          backgroundColor: '#0e7490',
+          color: '#ffffff',
+        },
+      });
+    },
+  ],
 }
-

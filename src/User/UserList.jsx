@@ -35,10 +35,10 @@ function UserList() {
       <ShouldRender when={hasError}>
         <Error msg="Failed to load data, Please try again" />
       </ShouldRender>
-      <h1 className="flex text-2xl font-serif justify-center mt-6 mr-6 absolute top-20 left-0 right-0">
+      <h1 className="flex text-2xl justify-center mt-6 absolute top-20 left-0 right-0">
         Users
       </h1>
-      <div className="grid container flex justify-center ml-16 mt-24">
+      <div className="grid container flex justify-center mt-24">
         {user.map((user) => (
           <UserItem user={user} />
         ))}

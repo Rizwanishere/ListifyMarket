@@ -67,13 +67,13 @@ function UpdateTodo() {
         <Error msg="Failed to update task, Please try again" />
       </ShouldRender>
 
-      <h1 className="text-2xl flex justify-center mb-10 font-serif">
+      <h1 className="text-2xl flex justify-center mb-10">
         Update Task
       </h1>
 
       <div className="flex flex-col">
         <label
-          className="block flex justify-center text-xl mt-4 py-1 font-serif"
+          className="block flex justify-center text-xl mt-4 py-1"
           htmlFor="editTodo"
         >
           Title
@@ -84,33 +84,33 @@ function UpdateTodo() {
           placeholder="Edit todo"
           value={todo.title}
           onChange={onInputChange}
-          className="block mx-auto mt-2 font-serif border border-gray-500 p-1 w-1/2 rounded"
+          className="block mx-auto mt-2 border border-gray-500 p-1 w-1/2 rounded"
         />
       </div>
 
       <div className="flex flex-col">
-        <label className="block flex justify-center text-xl mt-8 py-1 font-serif">
+        <label className="block flex justify-center text-xl mt-8 py-1">
           Description
         </label>
         <input
           name="description"
           value={todo.description}
           onChange={onInputChange}
-          className="border block mx-auto mt-1 font-serif border-gray-500 p-1 w-1/2 rounded"
+          className="border block mx-auto mt-1 border-gray-500 p-1 w-1/2 rounded"
           placeholder="Description"
           type="text"
         />
       </div>
 
       <div className="flex flex-col">
-        <label className="block flex justify-center text-xl mt-8 py-1 font-serif">
+        <label className="block flex justify-center text-xl mt-8 py-1">
           Status
         </label>
         <select
           name="status"
           value={todo.status}
           onChange={onInputChange}
-          className="border block mx-auto mt-1 font-serif border-gray-500 p-1 w-1/2 rounded"
+          className="border block mx-auto mt-1 border-gray-500 p-1 w-1/2 rounded"
         >
           <option value="">Select</option>
           <option value="in-progress">In progress</option>
@@ -122,7 +122,7 @@ function UpdateTodo() {
       <button
         type="submit"
         onClick={onSubmitBtn}
-        className="block mx-auto font-serif mt-8 border border-black rounded px-4 py-1.5"
+        className="block mx-auto mt-8 text-white bg-primary rounded px-4 py-1.5"
       >
         Update
       </button>

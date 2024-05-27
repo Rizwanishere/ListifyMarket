@@ -63,13 +63,13 @@ function TodoList() {
   return (
     <div>
       <div className="flex m-2 justify-center absolute top-20 left-0 right-0">
-        <h1 className="flex text-2xl font-serif mt-1.5 p-1 py-6 ml-16 px-8">
+        <h1 className="flex text-2xl mt-1.5 p-1 py-6 px-3">
           Tasks
         </h1>
 
         <button
           onClick={onPrev}
-          className="border border-black hover:bg-gray-100 mt-7 mb-10 mr-2 text-black p-1.5 rounded"
+          className="text-white bg-primary hover:bg-black mt-7 mb-10 mr-2 text-black p-1.5 rounded"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +91,7 @@ function TodoList() {
         </h1>
         <button
           onClick={onNext}
-          className="border border-black hover:bg-gray-100 mt-7 mb-10 ml-2 text-black p-1.5 rounded"
+          className="text-white bg-primary hover:bg-black mt-7 mb-10 ml-2 text-black p-1.5 rounded"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -145,7 +145,7 @@ function TodoList() {
             <button
               onClick={onSearch}
               type="submit"
-              className="absolute border border-black hover:bg-gray-100 bottom-1 end-2.5 rounded-lg px-3 py-1 text-sm font-medium text-black"
+              className="absolute text-white bg-primary hover:bg-black bottom-1 end-2.5 rounded-lg px-3 py-1 text-sm font-medium text-black"
             >
               Search
             </button>
@@ -155,7 +155,7 @@ function TodoList() {
         <div>
           <select
             onChange={onSortChange}
-            className="h-9 ml-3 mt-7 border border-black rounded font-serif"
+            className="h-9 ml-3 mt-7 border border-black rounded"
           >
             <option>Sort</option>
             <option value="_id:asc">Oldest First</option>
@@ -168,7 +168,7 @@ function TodoList() {
         <div>
           <Link
             to="/todo/new"
-            className="flex border border-black p-1 pl-2 pr-2 mt-7 ml-5 font-serif hover:bg-gray-100 rounded text-black"
+            className="flex text-white bg-primary p-1 pl-2 pr-2 mt-7 ml-5 hover:bg-black rounded text-black"
           >
             Add
           </Link>
@@ -183,7 +183,7 @@ function TodoList() {
         <Error />
       </ShouldRender>
 
-      <div className="grid container flex items-center justify-center py-36 ml-28">
+      <div className="grid container flex items-center justify-center py-36 ">
         {todo.map((todo) => (
           <TodoItem todo={todo} />
         ))}

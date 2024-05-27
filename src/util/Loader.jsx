@@ -3,7 +3,7 @@ function Loader() {
     <div role="status" className="flex absolute top-1/2 left-1/2 bg-white border border-gray-400 w-25 rounded">
       <svg
         aria-hidden="true"
-        className="flex w-9 h-9 text-gray-200 animate-spin dark:text-gray-400 fill-black "
+        className="flex w-9 h-9 text-gray-200 animate-spin dark:text-gray-400 fill-primary"
         viewBox="0 0 100 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +17,7 @@ function Loader() {
           fill="currentFill"
         />
       </svg>
-      <span className="mt-1 font-serif">Loading...</span>
+      <span className="mt-1">Loading...</span>
     </div>
   );
 }

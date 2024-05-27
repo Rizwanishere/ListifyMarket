@@ -36,11 +36,11 @@ function ProductList() {
   return (
     <div>
       <div className="flex m-2 justify-center absolute top-20 left-0 right-0">
-        <h1 className="flex text-xl font-serif mt-3 p-1">Products</h1>
+        <h1 className="flex text-xl mt-3 p-1">Products</h1>
 
         <div>
           <select
-            className="h-12 ml-3 mt-2 font-serif border border-black rounded"
+            className="h-12 ml-3 mt-2 border border-black rounded"
             onChange={onSortChange}
           >
             <option>Sort</option>
@@ -51,7 +51,7 @@ function ProductList() {
 
         <Link
           to="/products/new"
-          className="font-serif border border-black rounded m-2 p-3 pt-3 pb- rounded ml-4 text-black"
+          className="text-white bg-primary rounded m-2 p-3 pt-3 pb- rounded ml-4"
         >
           Add Product
         </Link>

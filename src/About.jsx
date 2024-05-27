@@ -4,8 +4,8 @@ function About() {
       <div className="mb-7 mx-auto py-24 px-4 sm:px-4 lg:px-32">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
           <div className="max-w-lg">
-            <h2 className="text-2xl font-serif">About ListifyMarket</h2>
-            <p className="mt-4 text-gray-500 text-lg font-serif">
+            <h2 className="text-2xl text-primary">About ListifyMarket</h2>
+            <p className="mt-4 text-gray-500 text-lg">
               Founded with a vision to revolutionize the online shopping
               experience. Since our inception, we have been committed to
               providing our customers with a wide range of high-quality
@@ -15,7 +15,7 @@ function About() {
               and shop with confidence.
             </p>
             <div className="mt-8">
-              <a href="#" className="text-black font-serif">
+              <a href="#" className="text-primary">
                 Learn more about ListifyMarket
                 <span className="ml-2">&#8594;</span>
               </a>

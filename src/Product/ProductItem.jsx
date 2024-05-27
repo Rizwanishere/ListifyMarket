@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 function Actions() {
   return (
-    <div className="mt-2 flex font-serif">
+    <div className="mt-2 flex">
       <a
         href="#"
-        className="border border-black text-black rounded-lg m-2 p-2 h-12 flex items-center whitespace-nowrap"
+        className="text-white bg-primary rounded-lg m-2 p-2 h-12 flex items-center whitespace-nowrap"
       >
         Add to cart
         <svg
@@ -27,7 +27,7 @@ function Actions() {
 
       <a
         href="#"
-        className="border border-black text-black rounded-lg m-2 p-2 h-12 flex items-center whitespace-nowrap"
+        className="text-white bg-primary rounded-lg m-2 p-2 h-12 flex items-center whitespace-nowrap"
       >
         Buy Now
         <svg
@@ -60,11 +60,11 @@ function ProductItem({ product }) {
         />
 
         <div className="px-5 pb-5">
-          <h5 className="text-xl font-semibold tracking-tight text-gray-900">
+          <h5 className="text-lg font-bold tracking-tight text-gray-900 text-primary">
             {product.title}
           </h5>
 
-          <div className="text-xl m-4 ml-0 font-bold">
+          <div className="text-xl m-4 ml-0 font-bold text-secondary">
             Price ${product.price}
           </div>
 

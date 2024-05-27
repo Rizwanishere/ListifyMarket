@@ -14,12 +14,12 @@ function TodoItem({ todo }) {
   }
 
   return (
-    <div className="flex max-w p-5 border shadow rounded-lg mb-3 items-center justify-between space-x-24">
+    <div className="flex max-w p-5 border border-black shadow rounded-lg mb-3 items-center justify-between space-x-24">
       <Link to={"/todo/" + todo._id}>
         
         <div className="px-5 pb-5">
           <h5 className="text-lg m-4 ml-0 font-bold">
-            Title: <span className="font-semibold text-gray-600">{todo.title} </span>
+            Title: <span className="text-2xl text-primary">{todo.title} </span>
           </h5>
           <div className="text-md font-bold tracking-tight text-gray-900">
             Description: <span className="font-semibold text-gray-600">{todo.description}</span>
@@ -34,10 +34,10 @@ function TodoItem({ todo }) {
 
      <div className="flex mt-4 justify-end">
       <Link to={{ pathname: `/todo/update/${todo._id}`, state: { todoData: todo } }}>
-        <button className="border border-gray-200 shadow rounded p-2 hover:bg-gray-100"><FontAwesomeIcon icon={faEdit} /></button>
+        <button className="text-white bg-primary shadow rounded p-2 hover:bg-black"><FontAwesomeIcon icon={faEdit} /></button>
       </Link>
       <button onClick={onDeleteButton}
-        className=" ml-2 border border-gray-200 shadow rounded p-2 mb-3 hover:bg-gray-100"
+        className=" ml-2 text-white bg-primary shadow rounded p-2 mb-3 hover:bg-black"
         ><FontAwesomeIcon icon={faTrash} /></button>
      </div>
 
