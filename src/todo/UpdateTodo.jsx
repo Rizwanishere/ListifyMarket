@@ -58,7 +58,7 @@ function UpdateTodo() {
   return (
     <div className="m-2 p-2">
       <ShouldRender when={success}>
-        <div className="py-2 mx-auto my-4 w-1/2 bg-green-500 text-white rounded text-center font-semibold">
+        <div className="py-2 mx-auto my-4 bg-primary text-white rounded text-center">
           Successfully updated task
         </div>
       </ShouldRender>
@@ -67,7 +67,7 @@ function UpdateTodo() {
         <Error msg="Failed to update task, Please try again" />
       </ShouldRender>
 
-      <h1 className="text-2xl flex justify-center mb-10">
+      <h1 className="text-2xl flex justify-center mb-5">
         Update Task
       </h1>
 
@@ -84,7 +84,7 @@ function UpdateTodo() {
           placeholder="Edit todo"
           value={todo.title}
           onChange={onInputChange}
-          className="block mx-auto mt-2 border border-gray-500 p-1 w-1/2 rounded"
+          className="block mx-auto mt-2 border border-gray-500 p-1 w-80 rounded"
         />
       </div>
 
@@ -96,7 +96,7 @@ function UpdateTodo() {
           name="description"
           value={todo.description}
           onChange={onInputChange}
-          className="border block mx-auto mt-1 border-gray-500 p-1 w-1/2 rounded"
+          className="border block mx-auto mt-1 border-gray-500 p-1 w-80 rounded"
           placeholder="Description"
           type="text"
         />
@@ -110,7 +110,7 @@ function UpdateTodo() {
           name="status"
           value={todo.status}
           onChange={onInputChange}
-          className="border block mx-auto mt-1 border-gray-500 p-1 w-1/2 rounded"
+          className="border block mx-auto mt-1 border-gray-500 p-1 w-80 rounded"
         >
           <option value="">Select</option>
           <option value="in-progress">In progress</option>
@@ -122,7 +122,7 @@ function UpdateTodo() {
       <button
         type="submit"
         onClick={onSubmitBtn}
-        className="block mx-auto mt-8 text-white bg-primary rounded px-4 py-1.5"
+        className="block mx-auto mt-8 text-white bg-primary hover:bg-secondary rounded px-4 py-1.5"
       >
         Update
       </button>

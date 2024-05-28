@@ -42,7 +42,7 @@ function NewProduct() {
     <div className="flex justify-center items-center mt-8">
       <div className="m-2 p-2 text-center w-full max-w-xl">
         <ShouldRender when={success}>
-          <div className="py-2 my-4 w-full bg-green-500 text-white rounded text-center font-semibold">
+          <div className="py-2 my-4 w-full bg-primary text-white rounded text-center font-semibold">
             Successfully saved data
           </div>
         </ShouldRender>
@@ -119,7 +119,7 @@ function NewProduct() {
           <button
             disabled={!todo.title || !todo.description || !todo.status}
             onClick={onSaveBtn}
-            className="bg-primary text-white rounded px-4 py-1.5 w-full"
+            className="bg-primary hover:bg-secondary text-white rounded px-4 py-1.5"
           >
             Save
           </button>

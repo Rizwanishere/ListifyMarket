@@ -51,7 +51,7 @@ function ProductList() {
 
         <Link
           to="/products/new"
-          className="text-white bg-primary rounded m-2 p-3 pt-3 pb- rounded ml-4"
+          className="text-white bg-primary hover:bg-secondary rounded m-2 p-3 pt-3 pb- rounded ml-4"
         >
           Add Product
         </Link>

@@ -69,7 +69,7 @@ function TodoList() {
 
         <button
           onClick={onPrev}
-          className="text-white bg-primary hover:bg-black mt-7 mb-10 mr-2 text-black p-1.5 rounded"
+          className="text-white bg-primary hover:bg-secondary mt-7 mb-10 mr-2 text-black p-1.5 rounded"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +91,7 @@ function TodoList() {
         </h1>
         <button
           onClick={onNext}
-          className="text-white bg-primary hover:bg-black mt-7 mb-10 ml-2 text-black p-1.5 rounded"
+          className="text-white bg-primary hover:bg-secondary mt-7 mb-10 ml-2 text-black p-1.5 rounded"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -145,7 +145,7 @@ function TodoList() {
             <button
               onClick={onSearch}
               type="submit"
-              className="absolute text-white bg-primary hover:bg-black bottom-1 end-2.5 rounded-lg px-3 py-1 text-sm font-medium text-black"
+              className="absolute text-white bg-primary hover:bg-secondary bottom-1 end-2.5 rounded-lg px-3 py-1 text-sm font-medium text-black"
             >
               Search
             </button>
@@ -168,7 +168,7 @@ function TodoList() {
         <div>
           <Link
             to="/todo/new"
-            className="flex text-white bg-primary p-1 pl-2 pr-2 mt-7 ml-5 hover:bg-black rounded text-black"
+            className="flex text-white bg-primary p-1 pl-2 pr-2 mt-7 ml-5 hover:bg-secondary rounded text-black"
           >
             Add
           </Link>

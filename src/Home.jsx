@@ -10,14 +10,14 @@ function Home() {
           <div className="grid flex justify-center">
             <div>
               <Link to="/products" className="flex justify-center">
-                <div className="border border-gray-300 p-4 rounded-md shadow-lg hover:shadow-2xl">
+                <div className="border-2 border-primary p-4 rounded-md shadow-lg hover:shadow-2xl">
                   <img src="../assets/shoppingPic.jpg" alt="Placeholder" />
                   <h2 className="text-3xl mb-2">Shop Now</h2>
                   <p className="text-lg">Discover our latest products and deals.</p>
                 </div>
               </Link>
               <Link to="/todo" className="flex justify-center mt-10">
-                <div className="border border-gray-300 p-4 rounded-md shadow-lg hover:shadow-2xl">
+                <div className="border-2 border-primary p-4 rounded-md shadow-lg hover:shadow-2xl">
                   <img src="../assets/todoPic.jpg" alt="Placeholder" />
                   <h2 className="text-3xl mb-2">Tasks</h2>
                   <p className="text-lg">Complete your pending tasks</p>

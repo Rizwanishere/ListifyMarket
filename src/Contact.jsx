@@ -53,7 +53,7 @@ function Contact() {
           <button
             type="submit"
             className="rounded px-5 py-3 text-center text-sm text-white bg-primary
-            hover:bg-gray-100 sm:w-fit"
+            hover:bg-secondary sm:w-fit"
           >
             Send message
           </button>

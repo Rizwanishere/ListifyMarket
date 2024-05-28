@@ -6,7 +6,7 @@ function Actions() {
     <div className="mt-2 flex">
       <a
         href="#"
-        className="text-white bg-primary rounded-lg m-2 p-2 h-12 flex items-center whitespace-nowrap"
+        className="text-white bg-primary hover:bg-secondary rounded-lg m-2 p-2 h-12 flex items-center whitespace-nowrap"
       >
         Add to cart
         <svg
@@ -27,7 +27,7 @@ function Actions() {
 
       <a
         href="#"
-        className="text-white bg-primary rounded-lg m-2 p-2 h-12 flex items-center whitespace-nowrap"
+        className="text-white bg-primary hover:bg-secondary rounded-lg m-2 p-2 h-12 flex items-center whitespace-nowrap"
       >
         Buy Now
         <svg
@@ -51,7 +51,7 @@ function Actions() {
 
 function ProductItem({ product }) {
   return (
-    <div className="flex m-2 w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow">
+    <div className="flex m-2 w-full max-w-sm bg-white border border-black hover:border-2 hover:border-primary hover:shadow-xl rounded-lg shadow">
       <Link to={"/products/" + product.id}>
         <img
           className="p-8 h-64 w-30"
