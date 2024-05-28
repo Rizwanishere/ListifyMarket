@@ -23,7 +23,7 @@ function About() {
           </div>
           <div className="mt-12 md:mt-0">
             <img
-              src="https://blog.emakina.com/wp-content/uploads/2020/09/ali-yahya-ytNFYf4d_30-unsplash.jpg"
+              src="https://kinsta.com/wp-content/uploads/2021/11/about-us-page-1024x512.png"
               alt="About Us Image"
               className="object-cover rounded-lg shadow-md h-96"
             />

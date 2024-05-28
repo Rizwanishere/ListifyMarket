@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import './styles.css';
+import logo from '/assets/listifymarketLogo.png';
 
 function Header() {
     return (
         <header className="sticky top-0 bg-white text-light-grey border-b border-gray-200">
             <nav className="container mx-auto flex items-center justify-between py-4">
                 <Link to="/" className="flex text-2xl">
-                    <img src="./assets/listifymarketLogo.png" alt="ListifyMarket Logo" className="h-8 w-8 mr-2" />
+                    <img src={logo} alt="ListifyMarket Logo" className="h-8 w-8 mr-2" />
                     ListifyMarket
                 </Link>
                 <ul className="flex space-x-4">
