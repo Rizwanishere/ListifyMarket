@@ -4,10 +4,11 @@ import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-function TodoItem({ todo }) {
+function TodoItem({ todo, onDelete }) {
   const onDeleteButton = async () => {
     try {
       await axios.delete(`https://cgc-todo-list.onrender.com/todo/${todo._id}`);
+      onDelete(todo._id);
     } catch(err) {
       console.log(err);
     }

@@ -60,6 +60,10 @@ function TodoList() {
     setDirection(tokens[1]);
   };
 
+  const refresh = () => {
+    fetchData();
+  };
+
   return (
     <div>
       <div className="flex m-2 justify-center absolute top-20 left-0 right-0">
@@ -185,7 +189,7 @@ function TodoList() {
 
       <div className="grid container flex items-center justify-center py-36 ">
         {todo.map((todo) => (
-          <TodoItem todo={todo} />
+          <TodoItem todo={todo} onDelete={refresh}/>
         ))}
       </div>
     </div>
