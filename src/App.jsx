@@ -1,9 +1,10 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import './styles.css';
+import "./styles.css";
 import Header from "./Header";
 import MainApp from "./MainApp";
 import Footer from "./Footer";
+import Sidebar from "./Products/Sidebar";
 
 const App = () => {
   return (
@@ -11,9 +12,10 @@ const App = () => {
       <BrowserRouter>
         <Header />
         <main className="flex flex-grow justify-center items-center">
-        <MainApp />
+          <MainApp />
         </main>
         <Footer />
+        <Sidebar />
       </BrowserRouter>
     </div>
   );

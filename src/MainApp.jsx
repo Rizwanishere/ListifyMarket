@@ -5,9 +5,8 @@ import About from "./About";
 import Contact from "./Contact";
 import NotFound from "./NotFound";
 import UserList from "./User/UserList";
-import ProductList from "./Product/ProductList";
-import ProductDetail from "./Product/ProductDetail";
-import NewProduct from "./Product/NewProduct";
+import ProductHome from "./Products/ProductHome";
+import ProductDetails from "./Products/ProductDetails";
 import TodoList from "./todo/TodoList";
 import TodoDetail from "./todo/TodoDetail";
 import NewTodo from "./todo/NewTodo";
@@ -20,9 +19,8 @@ function MainApp() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/products" element={<ProductList />} />
-        <Route path="/products/:id" element={<ProductDetail />} />
-        <Route path="/products/new" element={<NewProduct/>}></Route>
+        <Route path="/product" element={<ProductHome />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/todo" element={<TodoList />} />
         <Route path="/todo/:id" element={<TodoDetail />} />
         <Route path="/todo/new" element={<NewTodo />} />

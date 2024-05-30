@@ -1,5 +1,17 @@
-import ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import SidebarProvider from "./Contexts/SidebarContext";
+import CartProvider from "./Contexts/CartContext";
 
-ReactDOM.render(<App/>,document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <SidebarProvider>
+    <CartProvider>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </CartProvider>
+  </SidebarProvider>
+);

@@ -9,7 +9,7 @@ function Home() {
           <p className="text-lg mb-8 ml-4 animate-slideIn">Your one-stop destination for all your shopping needs.</p>
           <div className="grid flex justify-center">
             <div>
-              <Link to="/products" className="flex justify-center">
+              <Link to="/product" className="flex justify-center">
                 <div className="border-2 border-primary p-4 rounded-md shadow-lg hover:shadow-2xl">
                   <img src="../assets/shoppingPic2.jpg" alt="Placeholder" />
                   <h2 className="text-3xl mb-2">Shop Now</h2>
