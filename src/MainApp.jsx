@@ -12,6 +12,7 @@ import TodoDetail from "./todo/TodoDetail";
 import NewTodo from "./todo/NewTodo";
 import UpdateTodo from "./todo/UpdateTodo";
 import Login from "./User/Login";
+import Signup from "./User/Signup";
 
 function MainApp() {
   return (
@@ -27,6 +28,7 @@ function MainApp() {
         <Route path="/todo/new" element={<NewTodo />} />
         <Route path="/todo/update/:id" element={<UpdateTodo />} />
         <Route path="/signin" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>
