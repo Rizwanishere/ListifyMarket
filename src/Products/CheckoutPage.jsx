@@ -8,7 +8,6 @@ const CheckoutPage = () => {
   const [name, setName] = useState("");
   const [street, setStreet] = useState("");
   const [city, setCity] = useState("");
-  const [state, setState] = useState("");
   const [pincode, setPincode] = useState("");
   const [paymentMethod, setPaymentMethod] = useState("COD");
   const navigate = useNavigate();
@@ -133,6 +132,7 @@ const CheckoutPage = () => {
               type="button"
               className="bg-primary text-white py-2 px-4 mt-4"
               onClick={handlePlaceOrder}
+              disabled={!name || !street || !city || !pincode}
             >
               Place Order
             </button>
