@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { SidebarContext } from "./Contexts/SidebarContext";
 import { CartContext } from "./Contexts/CartContext";
 import { BsBag } from "react-icons/bs";
@@ -6,9 +6,13 @@ import { Link, useNavigate } from "react-router-dom";
 import logo from "/assets/listifymarketLogo.png";
 import ShouldRender from "./util/ShouldRender";
 import UserContext from "./Contexts/UserContext";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Header = () => {
   const { isLoggedin, setLoggedin } = useContext(UserContext);
+  const { isOpen, setIsOpen } = useContext(SidebarContext);
+  const { itemAmount } = useContext(CartContext);
   const navigate = useNavigate();
 
   const onLogoutButton = () => {
@@ -16,8 +20,18 @@ const Header = () => {
     navigate("/signin");
     setLoggedin(false);
   };
-  const { isOpen, setIsOpen } = useContext(SidebarContext);
-  const { itemAmount } = useContext(CartContext);
+
+  useEffect(() => {
+    const currentPath = window.location.pathname;
+    if (
+      !isLoggedin &&
+      (currentPath === "/todo" || currentPath === "/product")
+    ) {
+      navigate("/signin");
+      toast.error("Please signin to continue!");
+    }
+    console.log(currentPath);
+  }, [isLoggedin, navigate]);
 
   return (
     <header className="bg-white text-light-grey border-b border-gray-200">
@@ -48,17 +62,19 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <div
-              onClick={() => {
-                setIsOpen(!isOpen);
-              }}
-              className="cursor-pointer flex relative max-w-[50px]"
-            >
-              <BsBag className="text-2xl" />
-              <div className="bg-primary absolute -right-2 -bottom-2 text-[12px] w-[18px] text-white rounded-full flex justify-center items-center">
-                {itemAmount}
+            <ShouldRender when={isLoggedin}>
+              <div
+                onClick={() => {
+                  setIsOpen(!isOpen);
+                }}
+                className="cursor-pointer flex relative max-w-[50px]"
+              >
+                <BsBag className="text-2xl" />
+                <div className="bg-primary absolute -right-2 -bottom-2 text-[12px] w-[18px] text-white rounded-full flex justify-center items-center">
+                  {itemAmount}
+                </div>
               </div>
-            </div>
+            </ShouldRender>
           </li>
           <ShouldRender when={!isLoggedin}>
             <li>

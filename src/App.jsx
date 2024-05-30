@@ -6,6 +6,7 @@ import MainApp from "./MainApp";
 import Footer from "./Footer";
 import Sidebar from "./Products/Sidebar";
 import UserContext from "./Contexts/UserContext";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   const [isLoggedin, setLoggedin] = useState(() => {
@@ -28,6 +29,7 @@ const App = () => {
             <MainApp />
           </main>
           <Footer />
+          <ToastContainer />
           <Sidebar />
         </UserContext.Provider>
       </BrowserRouter>
