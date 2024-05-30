@@ -2,10 +2,20 @@ import React, { useContext } from "react";
 import { SidebarContext } from "./Contexts/SidebarContext";
 import { CartContext } from "./Contexts/CartContext";
 import { BsBag } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "/assets/listifymarketLogo.png";
+import ShouldRender from "./util/ShouldRender";
+import UserContext from "./Contexts/UserContext";
 
 const Header = () => {
+  const { isLoggedin, setLoggedin } = useContext(UserContext);
+  const navigate = useNavigate();
+
+  const onLogoutButton = () => {
+    localStorage.removeItem("token");
+    navigate("/signin");
+    setLoggedin(false);
+  };
   const { isOpen, setIsOpen } = useContext(SidebarContext);
   const { itemAmount } = useContext(CartContext);
 
@@ -33,11 +43,6 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link to="/users" className="nav-link">
-              Users
-            </Link>
-          </li>
-          <li>
             <Link to="/contact" className="nav-link">
               Contact
             </Link>
@@ -55,6 +60,23 @@ const Header = () => {
               </div>
             </div>
           </li>
+          <ShouldRender when={!isLoggedin}>
+            <li>
+              <Link
+                to="/signin"
+                className="p-1 rounded-lg bg-white text-primary border ml-2 border-primary"
+              >
+                Sign in
+              </Link>
+            </li>
+          </ShouldRender>
+          <ShouldRender when={isLoggedin}>
+            <li>
+              <button onClick={onLogoutButton} className="nav-link">
+                Logout
+              </button>
+            </li>
+          </ShouldRender>
         </ul>
       </nav>
     </header>
