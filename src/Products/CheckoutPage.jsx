@@ -22,7 +22,7 @@ const CheckoutPage = () => {
       <h1 className="text-2xl font-semibold mb-12 text-center">Checkout</h1>
       <div className="flex flex-col lg:flex-row gap-6">
         {/* Cart Items */}
-        <div className="flex-1 w-[940px]">
+        <div className="flex-1 lg:w-[60%]">
           <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
           <div className="flex flex-col gap-y-2 border-b pb-4">
             {cart.map((item) => (
@@ -35,7 +35,7 @@ const CheckoutPage = () => {
         </div>
 
         {/* Checkout Form */}
-        <div className="flex-1 ml-28">
+        <div className="flex-1 lg:w-[640px]">
           <h2 className="text-xl font-semibold mb-4">Shipping Details</h2>
           <form className="flex flex-col gap-y-4">
             <div>
