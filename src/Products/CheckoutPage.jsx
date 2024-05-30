@@ -70,16 +70,6 @@ const CheckoutPage = () => {
               />
             </div>
             <div>
-              <label className="block mb-1">State</label>
-              <input
-                type="text"
-                className="w-full border p-2"
-                value={state}
-                onChange={(e) => setState(e.target.value)}
-                required
-              />
-            </div>
-            <div>
               <label className="block mb-1">Pincode</label>
               <input
                 type="text"

@@ -14,6 +14,7 @@ import UpdateTodo from "./todo/UpdateTodo";
 import Login from "./User/Login";
 import Signup from "./User/Signup";
 import CheckoutPage from "./Products/CheckoutPage";
+import OrderConfirmation from "./Products/OrderConfirmation";
 
 function MainApp() {
   return (
@@ -31,6 +32,7 @@ function MainApp() {
         <Route path="/signin" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="checkout" element={<CheckoutPage />} />
+        <Route path="orderconfirmation" element={<OrderConfirmation/>}/>
 
         <Route path="*" element={<NotFound />} />
       </Routes>
