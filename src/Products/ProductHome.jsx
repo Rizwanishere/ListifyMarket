@@ -34,7 +34,7 @@ function ProductHome() {
 
   return (
     <div>
-      <div className="flex m-2 justify-center absolute top-20 left-0 right-0">
+      <div className="flex m-2 justify-center mt-6">
         <h1 className="flex text-xl mt-3 p-1">Products</h1>
         <div>
           <select
@@ -53,7 +53,7 @@ function ProductHome() {
       <ShouldRender when={hasError}>
         <Error />
       </ShouldRender>
-      <div className="container mx-auto px-4 mt-28">
+      <div className="container mx-auto px-4 mt-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {products.map((product) => (
             <Product product={product} key={product.id} />

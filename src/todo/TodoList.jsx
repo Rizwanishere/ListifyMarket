@@ -66,7 +66,7 @@ function TodoList() {
 
   return (
     <div>
-      <div className="flex m-2 justify-center absolute top-20 left-0 right-0">
+      <div className="flex m-2 justify-center py-6">
         <h1 className="flex text-2xl mt-1.5 p-1 py-6 px-3">
           Tasks
         </h1>
@@ -187,7 +187,7 @@ function TodoList() {
         <Error />
       </ShouldRender>
 
-      <div className="grid container flex items-center justify-center py-36 ">
+      <div className="grid container flex items-center justify-center py-2">
         {todo.map((todo) => (
           <TodoItem todo={todo} onDelete={refresh}/>
         ))}

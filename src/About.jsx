@@ -1,9 +1,9 @@
 function About() {
   return (
     <section>
-      <div className="mb-7 mx-auto py-24 px-4 sm:px-4 lg:px-32">
+      <div className="mb-7 mx-auto py-8 md:py-24 px-4 sm:px-4 lg:px-32">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-          <div className="max-w-lg">
+          <div className="order-2 md:order-1 max-w-lg">
             <h2 className="text-2xl text-primary">About ListifyMarket</h2>
             <p className="mt-4 text-gray-500 text-lg">
               Founded with a vision to revolutionize the online shopping
@@ -21,7 +21,7 @@ function About() {
               </a>
             </div>
           </div>
-          <div className="mt-12 md:mt-0">
+          <div className="order-1 md:order-2 mt-12 md:mt-0">
             <img
               src="https://kinsta.com/wp-content/uploads/2021/11/about-us-page-1024x512.png"
               alt="About Us Image"
