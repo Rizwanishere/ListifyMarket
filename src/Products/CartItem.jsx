@@ -21,7 +21,7 @@ const CartItem = ({ item }) => {
             {/* title */}
             <Link
               to={`/product/${id}`}
-              className="text-sm uppercase font-medium max-w-[240px] text-primary hover:underline"
+              className="text-sm uppercase font-medium max-w-[240px] text-black hover:underline"
             >
               {title}
             </Link>

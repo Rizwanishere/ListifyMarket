@@ -13,6 +13,7 @@ import NewTodo from "./todo/NewTodo";
 import UpdateTodo from "./todo/UpdateTodo";
 import Login from "./User/Login";
 import Signup from "./User/Signup";
+import CheckoutPage from "./Products/CheckoutPage";
 
 function MainApp() {
   return (
@@ -29,6 +30,7 @@ function MainApp() {
         <Route path="/todo/update/:id" element={<UpdateTodo />} />
         <Route path="/signin" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="checkout" element={<CheckoutPage />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

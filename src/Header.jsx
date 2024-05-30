@@ -88,7 +88,7 @@ const Header = () => {
           </ShouldRender>
           <ShouldRender when={isLoggedin}>
             <li>
-              <button onClick={onLogoutButton} className="nav-link">
+              <button onClick={onLogoutButton} className="ml-2 border px-1 border-primary rounded text-primary hover:text-white hover:bg-primary">
                 Logout
               </button>
             </li>
