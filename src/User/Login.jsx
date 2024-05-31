@@ -5,6 +5,7 @@ import Error from "../util/Error";
 import ShouldRender from "../util/ShouldRender";
 import UserContext from "../Contexts/UserContext";
 import { FaGithub, FaGoogle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Login() {
   const [user, setUser] = useState({ email: "", password: "" });
@@ -96,9 +97,9 @@ function Login() {
         <div className="text-center mt-4">
           <p className="text-gray-500">
             Don't have an account?{" "}
-            <a href="/signup" className="text-primary">
+            <Link to="/signup" className="text-primary">
               Sign Up
-            </a>
+            </Link>
           </p>
         </div>
       </form>

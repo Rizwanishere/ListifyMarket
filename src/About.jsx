@@ -15,7 +15,7 @@ function About() {
               and shop with confidence.
             </p>
             <div className="mt-8">
-              <a href="#" className="text-primary">
+              <a className="text-primary">
                 Learn more about ListifyMarket
                 <span className="ml-2">&#8594;</span>
               </a>

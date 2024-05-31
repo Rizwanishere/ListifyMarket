@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import shoppingPic from "../assets/shoppingPic2.jpg";
+import todoPic from "../assets/todoPic2.jpg";
 
 function Home() {
   return (
@@ -11,14 +13,14 @@ function Home() {
             <div className="grid gap-10 grid-cols-1 md:grid-cols-2">
               <Link to="/product" className="flex justify-center">
                 <div className="border-2 border-primary p-4 rounded-md shadow-lg hover:shadow-2xl w-full max-w-xs md:max-w-sm">
-                  <img src="../assets/shoppingPic2.jpg" alt="Shop Now" className="w-full h-auto object-cover mb-4" />
+                  <img src={shoppingPic} alt="Shop Now" className="w-full h-auto object-cover mb-4" />
                   <h2 className="text-xl md:text-3xl mb-2">Shop Now</h2>
                   <p className="text-md md:text-lg">Discover our latest products and deals.</p>
                 </div>
               </Link>
               <Link to="/todo" className="flex justify-center">
                 <div className="border-2 border-primary p-4 rounded-md shadow-lg hover:shadow-2xl w-full max-w-xs md:max-w-sm">
-                  <img src="../assets/todoPic2.jpg" alt="Tasks" className="w-full h-auto object-cover mb-4" />
+                  <img src={todoPic} alt="Tasks" className="w-full h-auto object-cover mb-4" />
                   <h2 className="text-xl md:text-3xl mb-2">Tasks</h2>
                   <p className="text-md md:text-lg">Complete your pending tasks</p>
                 </div>
