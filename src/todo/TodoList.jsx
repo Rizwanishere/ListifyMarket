@@ -113,7 +113,7 @@ function TodoList() {
           </svg>
         </button>
 
-        <div className="mt-7 ml-5">
+        <div className="mt-7 ml-5 hidden sm:block">
           <label
             for="default-search"
             className="sr-only mb-1 text-sm font-medium"
@@ -159,7 +159,7 @@ function TodoList() {
         <div>
           <select
             onChange={onSortChange}
-            className="h-9 ml-3 mt-7 border border-black rounded"
+            className="h-9 ml-3 mt-7 border border-black rounded hidden sm:block"
           >
             <option>Sort</option>
             <option value="_id:asc">Oldest First</option>
@@ -172,7 +172,7 @@ function TodoList() {
         <div>
           <Link
             to="/todo/new"
-            className="flex text-white bg-primary p-1 pl-2 pr-2 mt-7 ml-5 hover:bg-secondary rounded text-black"
+            className="flex text-white bg-primary p-1.5 pl-2 pr-2 mt-7 ml-5 hover:bg-secondary rounded text-black"
           >
             Add
           </Link>
