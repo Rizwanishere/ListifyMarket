@@ -7,6 +7,10 @@ import Footer from "./Footer";
 import Sidebar from "./Products/Sidebar";
 import UserContext from "./Contexts/UserContext";
 import { ToastContainer } from "react-toastify";
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+
+const stripePromise = loadStripe("pk_test_51PMPMCRqDKJqedll0zQ5Xb0S7my1mhW6ub8mmza5XJYfwhI6muyFq598rI3CtjVOsvg1ROctSbh8XzjmmVjB2qeS00NZ2U4e46");
 
 const App = () => {
   const [isLoggedin, setLoggedin] = useState(() => {
@@ -26,7 +30,9 @@ const App = () => {
         <UserContext.Provider value={{ isLoggedin, setLoggedin }}>
           <Header />
           <main className="flex flex-grow justify-center items-center">
-            <MainApp />
+            <Elements stripe={stripePromise}>
+              <MainApp />
+            </Elements>
           </main>
           <Footer />
           <ToastContainer />

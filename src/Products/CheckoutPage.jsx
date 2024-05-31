@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CartContext } from "../Contexts/CartContext";
 import CartItem from "./CartItem";
+import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 
 const CheckoutPage = () => {
   const { cart, total, clearCart } = useContext(CartContext);
@@ -12,16 +13,42 @@ const CheckoutPage = () => {
   const [paymentMethod, setPaymentMethod] = useState("COD");
   const navigate = useNavigate();
 
-  const handlePlaceOrder = () => {
-    clearCart();
-    navigate("/orderconfirmation");
+  const stripe = useStripe();
+  const elements = useElements();
+
+  const handlePlaceOrder = async () => {
+    if (paymentMethod === 'Card' && stripe && elements) {
+      const cardElement = elements.getElement(CardElement);
+      const { error, paymentMethod: stripePaymentMethod } = await stripe.createPaymentMethod({
+        type: 'card',
+        card: cardElement,
+        billing_details: {
+          name,
+          address: {
+            line1: street,
+            city,
+            postal_code: pincode,
+          },
+        },
+      });
+
+      if (!error) {
+        console.log('PaymentMethod created:', stripePaymentMethod);
+        clearCart();
+        navigate("/orderconfirmation");
+      } else {
+        console.error(error);
+      }
+    } else if (paymentMethod === 'COD') {
+      clearCart();
+      navigate("/orderconfirmation");
+    }
   };
 
   return (
     <div className="container mx-auto py-8 px-4 lg:px-0">
       <h1 className="text-2xl font-semibold mb-12 text-center">Checkout</h1>
       <div className="flex flex-col lg:flex-row gap-6">
-        {/* Cart Items */}
         <div className="flex-1 lg:w-[60%]">
           <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
           <div className="flex flex-col gap-y-2 border-b pb-4">
@@ -34,7 +61,6 @@ const CheckoutPage = () => {
           </div>
         </div>
 
-        {/* Checkout Form */}
         <div className="flex-1 lg:w-[640px]">
           <h2 className="text-xl font-semibold mb-4">Shipping Details</h2>
           <form className="flex flex-col gap-y-4">
@@ -108,24 +134,7 @@ const CheckoutPage = () => {
             {paymentMethod === "Card" && (
               <div>
                 <label className="block mb-1">Card Details</label>
-                <input
-                  type="text"
-                  className="w-full border p-2"
-                  placeholder="Card Number"
-                  required
-                />
-                <input
-                  type="text"
-                  className="w-full border p-2 mt-2"
-                  placeholder="MM/YY"
-                  required
-                />
-                <input
-                  type="text"
-                  className="w-full border p-2 mt-2"
-                  placeholder="CVV"
-                  required
-                />
+                <CardElement className="w-full border p-2" />
               </div>
             )}
             <button
