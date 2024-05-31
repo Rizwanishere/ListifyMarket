@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import shoppingPic from "../assets/shoppingPic2.jpg";
 import todoPic from "../assets/todoPic2.jpg";
+import ApiPing from "./util/ApiPing";
 
 function Home() {
   return (
     <div className="flex bg-white text-black text-center">
       <div className="container mx-auto px-4 py-8">
         <div>
+        <ApiPing />
           <h1 className="text-2xl md:text-4xl mt-4 mb-4 ml-4 animate-fadeIn">Welcome to ListifyMarket</h1>
           <p className="text-md md:text-lg mb-8 ml-4 animate-slideIn">Your one-stop destination for all your shopping needs.</p>
           <div className="flex justify-center">
