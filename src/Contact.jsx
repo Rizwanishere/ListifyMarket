@@ -7,7 +7,7 @@ function Contact() {
           Got a technical issue? Want to send feedback about a beta feature? Or
           want us to call you back? Let us know.
         </p>
-        <form action="#" className="space-y-8">
+        <div className="space-y-8">
           <div>
             <label
               htmlFor="email"
@@ -51,13 +51,12 @@ function Contact() {
             ></textarea>
           </div>
           <button
-            type="submit"
             className="rounded px-5 py-3 text-center text-sm text-white bg-primary
             hover:bg-secondary sm:w-fit"
           >
             Send message
           </button>
-        </form>
+        </div>
       </div>
     </section>
   );
