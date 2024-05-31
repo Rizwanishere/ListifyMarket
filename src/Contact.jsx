@@ -10,7 +10,7 @@ function Contact() {
         <form action="#" className="space-y-8">
           <div>
             <label
-              for="email"
+              htmlFor="email"
               className="mb-2 block text-sm text-black"
             >
               Your email
@@ -24,7 +24,7 @@ function Contact() {
           </div>
           <div>
             <label
-              for="subject"
+              htmlFor="subject"
               className="mb-2 block text-sm text-black"
             >
               Subject
@@ -38,7 +38,7 @@ function Contact() {
           </div>
           <div className="sm:col-span-2">
             <label
-              for="message"
+              htmlFor="message"
               className="mb-2 block text-sm text-black"
             >
               Your message

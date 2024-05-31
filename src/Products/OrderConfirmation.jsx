@@ -4,7 +4,7 @@ import { IoCheckmarkCircle } from "react-icons/io5";
 
 const OrderConfirmation = () => {
   return (
-    <div className="h-screen flex flex-col items-center justify-center px-4">
+    <div className="h-[740px] flex flex-col items-center justify-center px-4">
       <IoCheckmarkCircle className="text-6xl lg:text-9xl text-primary mb-8" />
       <h1 className="text-2xl lg:text-3xl font-semibold mb-4 text-center">
         Order Successful!
