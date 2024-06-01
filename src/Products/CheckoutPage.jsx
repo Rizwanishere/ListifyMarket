@@ -35,19 +35,19 @@ const CheckoutPage = () => {
       if (!error) {
         console.log('PaymentMethod created:', stripePaymentMethod);
         clearCart();
-        navigate("/orderconfirmation");
+        navigate("/orderconfirmation", { state: { address: { name, street, city, pincode } } });
       } else {
         console.error(error);
       }
     } else if (paymentMethod === 'COD') {
       clearCart();
-      navigate("/orderconfirmation");
+      navigate("/orderconfirmation", { state: { address: { name, street, city, pincode } } });
     }
   };
 
   return (
     <div className="container mx-auto py-8 px-4 lg:px-0">
-      <h1 className="text-2xl font-semibold mb-12 text-center">Checkout</h1>
+      <h1 className="text-2xl font-semibold mb-8 text-center">Checkout</h1>
       <div className="flex flex-col lg:flex-row gap-6">
         <div className="flex-1 lg:w-[60%]">
           <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
