@@ -42,7 +42,7 @@ const Sidebar = () => {
           {/* clear cart icon */}
           <div
             onClick={clearCart}
-            className="cursor-pointer py-4 bg-red-500 text-white w-12 h-12 flex flex-col justify-center items-center text-xl"
+            className="cursor-pointer py-4 rounded-lg bg-red-500 text-white w-12 h-12 flex flex-col justify-center items-center text-xl"
           >
             <FiTrash2 />
           </div>
