@@ -1,11 +1,11 @@
-# CGC Project - MERN Website
-### Exploring APIs: Products, GitHub Users, and Todo Lists
+# CGC Major Project - MERN Stack Website
+### ListifyMarket
 
-![Website](https://raw.githubusercontent.com/Rizwanishere/CGC-CodeCrafters/main/assets/EcomWebSS.png)
+![Website](https://raw.githubusercontent.com/Rizwanishere/CGC-CodeCrafters/main/assets/ListifySS.jpg)
 
 ### A Website with 3 api's
 1. Fakestoreapi (https://fakestoreapi.com/products)
-2. Github users api (https://api.github.com/users)
+2. My nodeJS api (https://github.com/Rizwanishere/cgc-nodeJS)
 3. My todo list api (https://github.com/Rizwanishere/cgc-todo-list) 
 # React 
 - React is a JavaScript library for building user interfaces based on components.
@@ -13,8 +13,8 @@
 # React Setup
 - ```npm create vite@latest```
 - Enter project-name
-- React 
-- JavaScript
+- Select React 
+- Select JavaScript
 - ```cd project-name ```
 - ```npm install```
 - ```npm run dev```
@@ -34,3 +34,8 @@
 1. ```npm i axios```
 2. ```npm i react-icons```
 3. ```npm i react-router-dom```
+4. ```npm install --save react-toastify```
+
+# Integrated Stripe payment gateway
+1. ```npm install @stripe/react-stripe-js@^2.7.1```
+2. ```npm install @stripe/stripe-js@^3.4.1```
