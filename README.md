@@ -3,6 +3,9 @@
 
 ![Website](https://raw.githubusercontent.com/Rizwanishere/CGC-CodeCrafters/main/assets/ListifySS.jpg)
 
+### Deployed on Render
+https://listifymarket-4plx.onrender.com
+
 ### A Website with 3 api's
 1. Fakestoreapi (https://fakestoreapi.com/products)
 2. My nodeJS api (https://github.com/Rizwanishere/cgc-nodeJS)
