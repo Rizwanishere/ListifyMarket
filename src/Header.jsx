@@ -63,7 +63,7 @@ const Header = () => {
   );
 
   const ToggleMenu = () => (
-    <ul className="flex flex-col space-y-4">
+    <ul className="flex flex-col mb-2 space-y-4">
       <li>
         <Link to="/about" className="nav-link" onClick={() => setIsMenuOpen(false)}>
           About
