@@ -6,10 +6,12 @@ import ShouldRender from "../util/ShouldRender";
 import UserContext from "../Contexts/UserContext";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Loader from "../util/Loader";
 
 function Login() {
   const [user, setUser] = useState({ email: "", password: "" });
   const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { setLoggedin } = useContext(UserContext);
 
@@ -19,6 +21,8 @@ function Login() {
   };
   const onLogin = async (evt) => {
     evt.preventDefault();
+    setLoading(true);
+    setError(false);
     try {
       const url = "https://cgc-nodejs.onrender.com/users/signin";
       const res = await axios.post(url, user);
@@ -27,6 +31,8 @@ function Login() {
       setLoggedin(true);
     } catch (error) {
       setError(true);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -42,6 +48,8 @@ function Login() {
         <h1 className="font-bold text-2xl mb-8 text-center">
           Sign In to Your Account
         </h1>
+
+        {loading && <Loader />}
 
         <div className="flex flex-col space-y-4 mb-4">
           <button className="flex items-center justify-center bg-white text-black border border-gray-300 px-4 py-2 rounded focus:outline-none">

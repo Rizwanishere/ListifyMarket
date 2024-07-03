@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import Error from "../util/Error";
 import ShouldRender from "../util/ShouldRender";
+import Loader from "../util/Loader";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 
 function Signup() {
@@ -15,6 +16,7 @@ function Signup() {
   const [errors, setErrors] = useState({});
   const [submitError, setSubmitError] = useState(false);
   const [submitErrorMessage, setSubmitErrorMessage] = useState("");
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const validateInput = (name, value) => {
@@ -56,6 +58,8 @@ function Signup() {
 
   const onSignup = async (evt) => {
     evt.preventDefault();
+    setLoading(true);
+    setSubmitError(false);
     try {
       const url = "https://cgc-nodejs.onrender.com/users/signup";
       await axios.post(url, user);
@@ -63,6 +67,8 @@ function Signup() {
     } catch (error) {
       setSubmitError(true);
       setSubmitErrorMessage(error.response?.data || "Internal Server Error");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -83,6 +89,8 @@ function Signup() {
           Create Your Account
         </h1>
 
+        {loading && <Loader />}
+        
         <div className="flex flex-col space-y-4 mb-4">
           <button className="flex items-center justify-center bg-white text-black border border-gray-300 px-4 py-2 rounded focus:outline-none">
             <FaGithub className="mr-2 text-primary" /> Sign up with GitHub
